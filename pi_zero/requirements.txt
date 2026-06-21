@@ -1,0 +1,25 @@
+# pi_zero/requirements.txt
+# Dependencies สำหรับ Guardian AI Pi Zero W firmware
+# ติดตั้งด้วย: pip install -r requirements.txt
+
+# ─── Audio Capture ────────────────────────────────────────────────
+# sounddevice: อ่านเสียงผ่าน ALSA/PortAudio (เทียบเท่า I2S driver บน ESP32)
+sounddevice>=0.4.6
+
+# numpy: array operations สำหรับ PCM processing และคำนวณ dBFS
+numpy>=1.24.0
+
+# ─── MQTT ─────────────────────────────────────────────────────────
+# paho-mqtt: MQTT client (จะใช้ใน mqtt_client.py รอบถัดไป)
+paho-mqtt>=2.0.0
+
+# ─── Utilities ────────────────────────────────────────────────────
+# python-dotenv: โหลด config จาก .env file
+python-dotenv>=1.0.0
+
+# ─── System Notes ─────────────────────────────────────────────────
+# sounddevice ต้องการ PortAudio ติดตั้งในระบบ:
+#   sudo apt-get install libportaudio2 portaudio19-dev
+#
+# ALSA tools สำหรับ debug:
+#   sudo apt-get install alsa-utils
